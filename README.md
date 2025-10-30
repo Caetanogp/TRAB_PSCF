@@ -1,11 +1,11 @@
+Comparação de Desempenho: Threads N:M vs 1:1 (Java)
+
 Integrantes: Caetano Padoin e Gastão Borges
 Disciplina: Performance em Sistemas Ciber-Físicos
 Instituição: Pontifícia Universidade Católica do Paraná
 Período: Quarto A
 
-Comparação de Desempenho: Threads N:M vs 1:1 (Java)
-
-Objetivo: Comparar N:M e 1:1 medindo o tempo total para a mesma carga.
+Objetivo: comparar N:M e 1:1 medindo o tempo total para a mesma carga.
 
 Como executar
 
@@ -16,10 +16,14 @@ mkdir -p out
 javac -d out src/*.java
 
 Executar manualmente (exemplos)
-# N:M
+
+N:M
+
 java -cp out ModeloNM 100 5000000 8
 
-# 1:1
+
+1:1
+
 java -cp out UmParaUm 100 5000000
 
 Executar tudo (gera resultados/tempos.csv)
@@ -28,7 +32,7 @@ Windows (CMD):
 
 scripts\executar_tudo.bat
 
-Metodologia 
+Metodologia
 
 Carga: UnidadeDeTrabalho realiza operações inteiras simples em loop (CPU-bound) por um número fixo de iterações.
 
@@ -51,10 +55,10 @@ Resultados
 Arquivo gerado: resultados/tempos.csv
 
 N	N:M (ms)	1:1 (ms)
-10	 23	         24
-100	 81	         86
-500	 316	     191
-1000 618	     351
+10	23	24
+100	81	86
+500	316	191
+1000	618	351
 
 Bruto (do CSV):
 
@@ -84,11 +88,9 @@ Esse “ponto de virada” depende do hardware e do M do pool. Se testarmos POOL
 
 Observações rápidas
 
-Se o teste ficar muito lento/rápido, ajuste ITER nos scripts.
+Se o teste ficar muito lento/rápido, ajustamos ITER nos scripts.
 
-Para resultados mais estáveis, dá para rodar cada cenário 3x e tirar média.
-
-
+Para resultados mais estáveis, dá para rodar cada cenário 3× e tirar média.
 
 Estrutura do projeto
 mapeamento-threads-benchmark/
@@ -100,4 +102,4 @@ mapeamento-threads-benchmark/
 │  └─ executar_tudo.bat
 ├─ resultados/
 │  └─ tempos.csv      # gerado pelos scripts
-└─ README.md (este arquivo)
+└─ README.md
