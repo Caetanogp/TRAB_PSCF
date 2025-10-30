@@ -98,18 +98,18 @@ O projeto tem três pastas principais:
 
 src/: contém os códigos Java.
 
-UnidadeDeTrabalho.java (tarefa CPU-bound usada nos dois modelos),
+UnidadeDeTrabalho.java,
 
-ModeloNM.java (simulação N:M com pool fixo),
+ModeloNM.java,
 
-UmParaUm.java (simulação 1:1 com uma Thread por tarefa).
+UmParaUm.java.
 
-scripts/: contém o script de automação para Windows.
+scripts/: contém script de automação para Windows.
 
-executar_tudo.bat (compila, executa todos os cenários e gera o CSV).
+executar_tudo.bat.
 
 resultados/: saída do experimento.
 
-tempos.csv (tabela final com os tempos medidos).
+tempos.csv.
 
-Na raiz ficam o README.md
+Na raiz fica o README.md.
