@@ -92,14 +92,24 @@ Se o teste ficar muito lento/rápido, ajustamos ITER nos scripts.
 
 Para resultados mais estáveis, dá para rodar cada cenário 3× e tirar média.
 
-Estrutura do projeto
-mapeamento-threads-benchmark/
-├─ src/
-│  ├─ UnidadeDeTrabalho.java
-│  ├─ ModeloNM.java
-│  └─ UmParaUm.java
-├─ scripts/
-│  └─ executar_tudo.bat
-├─ resultados/
-│  └─ tempos.csv      # gerado pelos scripts
-└─ README.md
+Estrutura do projeto (descrição)
+
+O projeto tem três pastas principais:
+
+src/: contém os códigos Java.
+
+UnidadeDeTrabalho.java (tarefa CPU-bound usada nos dois modelos),
+
+ModeloNM.java (simulação N:M com pool fixo),
+
+UmParaUm.java (simulação 1:1 com uma Thread por tarefa).
+
+scripts/: contém o script de automação para Windows.
+
+executar_tudo.bat (compila, executa todos os cenários e gera o CSV).
+
+resultados/: saída do experimento.
+
+tempos.csv (tabela final com os tempos medidos).
+
+Na raiz ficam o README.md
